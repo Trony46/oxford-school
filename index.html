@@ -1,0 +1,1367 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>OXford English School | CBSE Admissions Open</title>
+<meta name="description" content="Admissions open for AY 2026-27. CBSE curriculum, integrated competitive exam coaching, and a nationwide network of campuses." />
+
+<!--
+  =====================================================================
+  NARAYANA SCHOOL LANDING PAGE — CLONE / STARTER TEMPLATE
+  ---------------------------------------------------------------------
+  This file rebuilds the public marketing page structure as a clean,
+  single-file template you can edit freely. Notes:
+
+  1. EVERY <img> below points to a solid red placeholder (inline SVG
+     data-uri). Each one has a comment right above it telling you what
+     real asset should go there (e.g. "assets/logo1.png"). Just swap
+     the `src` attribute when you have the real files — drop them in
+     the /assets folder and the code already has the right alt text,
+     width/height, and CSS classes set up.
+  2. Real photos of real students/parents were intentionally NOT
+     reproduced — names, quotes and scores are placeholder copy for
+     you to replace with your own content.
+  3. Font is set to "Poppins" (Google Fonts) as a free stand-in for
+     the original "Gilroy" license. Swap the @font-face / Google
+     Fonts link if you own Gilroy files.
+  4. The admission form posts nowhere — there's a commented TODO at
+     the bottom JS block showing where to wire up your backend
+     (fetch/POST, OTP verification, etc).
+  =====================================================================
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          brandBlue: "#00549E",
+          brandBlueDark: "#00427a",
+          brandYellow: "#FFD700",
+          brandOrange: "#F97316",
+          brandOrangeDark: "#ea580c",
+          brandOrangeLight: "#FFF7ED",
+          brandGreen: "#00A651",
+        },
+        fontFamily: {
+          /* TODO: replace "Poppins" with "Gilroy" once you have licensed font files */
+          sans: ["Poppins", "sans-serif"],
+        },
+      },
+    },
+  };
+</script>
+
+<style>
+  /* Respect reduced-motion preference */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; scroll-behavior: auto !important; }
+  }
+
+  /* Visible keyboard focus ring on interactive elements */
+  a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+    outline: 3px solid #00549E;
+    outline-offset: 2px;
+  }
+
+  .faq-content { transition: max-height .25s ease; }
+
+  @keyframes bounceSubtle {
+    0%, 100% { transform: translate(-50%, 0); }
+    50% { transform: translate(-50%, -6px); }
+  }
+  .animate-bounce-subtle { animation: bounceSubtle 2.2s ease-in-out infinite; }
+</style>
+</head>
+
+<body class="font-sans antialiased bg-white text-gray-800 overflow-x-hidden">
+
+<!-- =================== NAVBAR =================== -->
+<nav class="bg-white shadow-md py-3 px-4 md:px-6 sticky top-0 z-50">
+  <div class="container mx-auto flex justify-center items-center">
+    <div class="flex items-center gap-2 md:gap-4">
+
+      <!-- IMAGE PLACEHOLDER: assets/logo1.png (Narayana International School logo) -->
+      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='3'%3E%3Crect width='4' height='3' fill='%23dc2626'/%3E%3C/svg%3E"
+           alt="Oxford English School V1 Logo" class="h-8 md:h-12 object-contain" width="120" height="48">
+
+      <div class="h-8 md:h-10 w-px bg-gray-300"></div>
+
+      <!-- IMAGE PLACEHOLDER: assets/narayana-logo.png (main Narayana Schools logo) -->
+      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='3'%3E%3Crect width='4' height='3' fill='%23dc2626'/%3E%3C/svg%3E"
+           alt="Narayana Logo" class="h-8 md:h-12 object-contain" width="120" height="48">
+
+      <div class="h-8 md:h-10 w-px bg-gray-300"></div>
+
+      <!-- IMAGE PLACEHOLDER: assets/logo2.png (Cerdmont International School logo) -->
+      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='3'%3E%3Crect width='4' height='3' fill='%23dc2626'/%3E%3C/svg%3E"
+           alt="Cerdmont International School Logo" class="h-8 md:h-12 object-contain" width="120" height="48">
+    </div>
+  </div>
+</nav>
+
+<!-- =================== HERO =================== -->
+<section class="bg-brandBlue bg-cover bg-center py-12 lg:py-20 lg:min-h-[650px] flex items-center relative overflow-x-hidden">
+  <div class="container mx-auto px-4 relative z-20 w-full">
+    <div class="flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-12">
+
+      <div class="text-white lg:w-3/5 w-full text-left">
+        <h2 class="text-[18px] md:text-2xl font-medium mb-2 lg:mb-1">One Of Largest CBSE School Network</h2>
+        <h1 class="text-[32px] md:text-4xl lg:text-5xl font-bold text-brandYellow mb-6 lg:mb-8 leading-tight">Oxford English School V1</h1>
+
+        <div id="hero-stats" class="grid grid-cols-2 md:grid-cols-6 gap-2 md:gap-6 mb-6 lg:mb-8">
+          <div>
+            <div class="text-[25px] md:text-3xl font-bold"><span class="counter" data-target="900">0</span>+</div>
+            <div class="text-[15px] md:text-sm text-blue-100">Campus</div>
+          </div>
+          <div>
+            <div class="text-[25px] md:text-3xl font-bold"><span class="counter" data-target="250">0</span>+</div>
+            <div class="text-[15px] md:text-sm text-blue-100">Cities</div>
+          </div>
+          <div>
+            <div class="text-[25px] md:text-3xl font-bold"><span class="counter" data-target="47">0</span>+</div>
+            <div class="text-[15px] md:text-sm text-blue-100">Legacy</div>
+          </div>
+          <div>
+            <div class="text-[25px] md:text-3xl font-bold"><span class="counter" data-target="600000">0</span>+</div>
+            <div class="text-[15px] md:text-sm text-blue-100">Learners All Over India</div>
+          </div>
+        </div>
+
+        <ul class="space-y-3 mb-8 text-sm md:text-base font-light">
+          <li class="flex items-start md:items-center gap-3 text-[16px] md:text-base">
+            <span class="w-1.5 h-1.5 bg-white rounded-full mt-2 md:mt-0 flex-shrink-0"></span>
+            Technologically driven, stress-free curriculum
+          </li>
+          <li class="flex items-start md:items-center gap-3 text-[16px] md:text-base">
+            <span class="w-1.5 h-1.5 bg-white rounded-full mt-2 md:mt-0 flex-shrink-0"></span>
+            One of Asia's largest educational conglomerates
+          </li>
+          <li class="hidden md:flex items-center gap-3 text-[16px] md:text-base">
+            <span class="w-1.5 h-1.5 bg-white rounded-full flex-shrink-0"></span>
+            Learning that leads to careers, not just certificates
+          </li>
+        </ul>
+
+        <div class="flex justify-center lg:justify-start">
+          <button class="open-modal-btn bg-brandOrange hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-md transition shadow-lg w-full md:w-auto">
+            Get Admission Fees Details
+          </button>
+        </div>
+      </div>
+
+      <!-- Hero admission form card -->
+      <div class="w-full lg:w-[400px] bg-white rounded-xl shadow-2xl border-2 border-brandOrange overflow-hidden mx-auto">
+        <div class="p-5 md:p-6">
+          <h3 class="text-[22px] md:text-xl font-bold text-black mb-4">Admissions Open for AY 2026-27</h3>
+
+          <form class="space-y-3" id="form-hero" novalidate>
+            <input type="text" placeholder="Student Name" required name="name"
+                   class="w-full px-4 py-2.5 border border-gray-300 rounded text-md focus:outline-none focus:border-brandBlue">
+
+            <input type="tel" placeholder="Ph. Number" required pattern="[0-9]{10}" maxlength="10" name="phone"
+                   class="w-full px-4 py-2.5 border border-gray-300 rounded text-md focus:outline-none focus:border-brandBlue">
+
+            <input type="email" placeholder="Parent's Email (Optional)" name="parent_email"
+                   class="w-full px-4 py-2.5 border border-gray-300 rounded text-md focus:outline-none focus:border-brandBlue">
+
+            <!-- TODO: This city list is hardcoded from the original site's West Bengal branches.
+                 Replace with your own region/branch list. -->
+            <select required name="city" class="w-full px-4 py-2.5 border border-gray-300 rounded text-md text-gray-500 bg-white focus:border-brandBlue">
+              <option selected disabled value="">Select City</option>
+              <option>Bardhaman</option>
+              <option>Coochbehar</option>
+              <option>Contai</option>
+              <option>Darjeeling</option>
+              <option>East Midnapore</option>
+              <option>Hooghly</option>
+              <option>Howrah</option>
+              <option>Kalimpong</option>
+              <option>Kolkata</option>
+              <option>Murshidabad</option>
+              <option>Nadia</option>
+              <option>North 24 Parganas</option>
+              <option>North Dinajpur</option>
+              <option>Purulia</option>
+            </select>
+
+            <select required name="class" class="w-full px-4 py-2.5 border border-gray-300 rounded text-md text-gray-500 bg-white focus:border-brandBlue">
+              <option selected disabled value="">Select Class</option>
+              <option>Nursery</option><option>LKG</option><option>UKG</option>
+              <option>Class 1</option><option>Class 2</option><option>Class 3</option>
+              <option>Class 4</option><option>Class 5</option><option>Class 6</option>
+              <option>Class 7</option><option>Class 8</option><option>Class 9</option>
+              <option>Class 10</option><option>Class 11</option><option>Class 12</option>
+            </select>
+
+            <!-- Mock OTP flow — see <script> at bottom for how to wire a real SMS/OTP API -->
+            <div class="mt-2 flex flex-col gap-2" data-otp-trigger>
+              <button type="button" data-send-otp class="w-full md:w-auto bg-brandOrange hover:bg-orange-600 text-white font-bold py-2.5 px-6 rounded text-sm transition inline-flex items-center justify-center gap-2">
+                <span>Submit Now</span>
+              </button>
+              <span class="otp-status hidden text-sm text-green-600 font-medium">OTP sent successfully.</span>
+            </div>
+
+            <div class="otp-section hidden">
+              <input type="text" maxlength="6" placeholder="Enter OTP" data-otp-input
+                     class="w-full px-4 py-2.5 border border-gray-300 rounded text-md focus:outline-none focus:border-brandBlue">
+              <button type="button" data-verify-otp class="btn btn-primary mt-2 w-full bg-brandOrange hover:bg-orange-600 text-white font-bold py-2.5 px-6 rounded text-sm transition">
+                Verify OTP
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Wide promotional banner strip below hero -->
+<section class="pt-8 md:pt-16">
+  <div class="container mx-auto px-4">
+    <!-- IMAGE PLACEHOLDER: assets/desktop-banner.webp (wide promo strip, e.g. "100% Free for School Toppers") -->
+    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1400' height='400'%3E%3Crect width='1400' height='400' fill='%23dc2626'/%3E%3C/svg%3E"
+         alt="Scholarship banner" class="w-full h-full object-cover rounded-xl" width="1400" height="400">
+  </div>
+</section>
+
+<!-- =================== PROGRAMS CAROUSEL =================== -->
+<section class="py-12 md:py-16 bg-white overflow-hidden">
+  <div class="container mx-auto px-4 md:px-6">
+    <div class="md:text-center text-left mb-10 md:mb-12">
+      <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-3">Where do you want to start from?</h2>
+      <p class="text-gray-500 text-md md:text-base">
+        We shape your child's future with care — from pre-primary dreams to higher-secondary success.
+      </p>
+    </div>
+
+    <div id="programs-slider" class="splide" aria-label="Academic Programs">
+      <div class="splide__track">
+        <ul class="splide__list">
+
+          <!-- Program card template — duplicated 4x below. Swap image/copy per program. -->
+          <li class="splide__slide">
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 flex flex-col h-full border border-gray-100">
+              <div class="h-48 md:h-72 relative overflow-hidden">
+                <!-- IMAGE PLACEHOLDER: assets/secondary.webp -->
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='3'%3E%3Crect width='4' height='3' fill='%23dc2626'/%3E%3C/svg%3E"
+                     alt="Sr. Secondary" class="absolute inset-0 w-full h-full object-cover" width="287" height="263">
+                <div class="absolute top-0 left-0 p-4 text-white hidden md:block">
+                  <h3 class="font-bold text-[24px] leading-tight">SR. Secondary</h3>
+                  <p class="text-lg font-medium leading-tight">(Class 11 &amp; 12)</p>
+                </div>
+              </div>
+              <div class="block md:hidden bg-[#F5821F] px-4 py-2">
+                <h3 class="font-bold text-[24px] text-white leading-tight inline">Class 11 &amp; 12</h3>
+                <p class="text-lg font-medium text-white mt-0.5 leading-tight inline"> (SR. Secondary)</p>
+              </div>
+              <div class="p-6 flex-grow">
+                <h4 class="text-gray-700 text-[20px] font-semibold mb-3 leading-tight">CBSE schooling that opens doors to top competitive exams.</h4>
+                <ul class="space-y-2 text-[16px] font-medium text-gray-600">
+                  <li><i class="fas fa-circle text-[6px] text-brandBlue mr-2"></i>Integrated coaching for competitive exams</li>
+                  <li><i class="fas fa-circle text-[6px] text-brandBlue mr-2"></i>Critical thinking and time management</li>
+                  <li><i class="fas fa-circle text-[6px] text-brandBlue mr-2"></i>Mentorship and wellness support for growth</li>
+                </ul>
+              </div>
+              <div class="flex text-white text-sm font-semibold">
+                <button class="open-modal-btn w-1/2 bg-brandOrange hover:bg-brandOrangeDark py-3 transition"><i class="fas fa-download"></i> Brochure</button>
+                <button class="open-modal-btn w-1/2 bg-brandBlue hover:bg-brandBlueDark py-3 transition"><i class="fas fa-download"></i> Fees <span class="inline md:hidden">Structure</span></button>
+              </div>
+            </div>
+          </li>
+
+          <li class="splide__slide">
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 flex flex-col h-full border border-gray-100">
+              <div class="h-48 md:h-72 relative overflow-hidden">
+                <!-- IMAGE PLACEHOLDER: assets/e-kidz.webp -->
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='3'%3E%3Crect width='4' height='3' fill='%23dc2626'/%3E%3C/svg%3E"
+                     alt="eKidz" class="absolute inset-0 w-full h-full object-cover" width="287" height="263">
+                <div class="absolute top-0 left-0 p-4 text-white hidden md:block">
+                  <h3 class="font-bold text-[24px] leading-tight">eKidz</h3>
+                  <p class="text-lg font-medium leading-tight">(Nursery to UKG)</p>
+                </div>
+              </div>
+              <div class="block md:hidden bg-[#15539B] px-4 py-2">
+                <h3 class="font-bold text-[24px] text-white leading-tight inline">Nursery to UKG</h3>
+                <p class="text-lg font-medium text-white mt-0.5 leading-tight inline"> (eKidz)</p>
+              </div>
+              <div class="p-6 flex-grow">
+                <h4 class="text-gray-700 text-[20px] font-semibold mb-3">We know your concern</h4>
+                <ul class="space-y-2 text-[16px] font-medium text-gray-600">
+                  <li><i class="fas fa-circle text-[6px] text-brandBlue mr-2"></i>Holistic curriculum</li>
+                  <li><i class="fas fa-circle text-[6px] text-brandBlue mr-2"></i>Personal attention &amp; safety</li>
+                  <li><i class="fas fa-circle text-[6px] text-brandBlue mr-2"></i>Personalized hygiene practices</li>
+                  <li><i class="fas fa-circle text-[6px] text-brandBlue mr-2"></i>Holistic development activities</li>
+                </ul>
+              </div>
+              <div class="flex text-white text-sm font-semibold">
+                <button class="open-modal-btn w-1/2 bg-brandOrange hover:bg-brandOrangeDark py-3 transition"><i class="fas fa-download"></i> Brochure</button>
+                <button class="open-modal-btn w-1/2 bg-brandBlue hover:bg-brandBlueDark py-3 transition"><i class="fas fa-download"></i> Fees <span class="inline md:hidden">Structure</span></button>
+              </div>
+            </div>
+          </li>
+
+          <li class="splide__slide">
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 flex flex-col h-full border border-gray-100">
+              <div class="h-48 md:h-72 relative overflow-hidden">
+                <!-- IMAGE PLACEHOLDER: assets/echamps.webp -->
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='3'%3E%3Crect width='4' height='3' fill='%23dc2626'/%3E%3C/svg%3E"
+                     alt="eChamps" class="absolute inset-0 w-full h-full object-cover" width="287" height="263">
+                <div class="absolute top-0 left-0 p-4 text-white hidden md:block">
+                  <h3 class="font-bold text-[24px] leading-tight">eChamps</h3>
+                  <p class="text-lg font-medium leading-tight">(Class 1 to 5)</p>
+                </div>
+              </div>
+              <div class="block md:hidden bg-[#F5821F] px-4 py-2">
+                <h3 class="font-bold text-[24px] text-white leading-tight inline">Class 1 to 5</h3>
+                <p class="text-lg font-medium text-white mt-0.5 leading-tight inline"> (eChamps)</p>
+              </div>
+              <div class="p-6 flex-grow">
+                <h4 class="text-gray-700 text-[20px] font-semibold mb-3 leading-tight">Emphasises overall development</h4>
+                <ul class="space-y-2 text-[16px] font-medium text-gray-600">
+                  <li><i class="fas fa-circle text-[6px] text-brandBlue mr-2"></i>Communication skills</li>
+                  <li><i class="fas fa-circle text-[6px] text-brandBlue mr-2"></i>Social skills</li>
+                  <li><i class="fas fa-circle text-[6px] text-brandBlue mr-2"></i>Emotional skills</li>
+                  <li><i class="fas fa-circle text-[6px] text-brandBlue mr-2"></i>Focus on overall development</li>
+                </ul>
+              </div>
+              <div class="flex text-white text-sm font-semibold">
+                <button class="open-modal-btn w-1/2 bg-brandOrange hover:bg-brandOrangeDark py-3 transition"><i class="fas fa-download"></i> Brochure</button>
+                <button class="open-modal-btn w-1/2 bg-brandBlue hover:bg-brandBlueDark py-3 transition"><i class="fas fa-download"></i> Fees <span class="inline md:hidden">Structure</span></button>
+              </div>
+            </div>
+          </li>
+
+          <li class="splide__slide">
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 flex flex-col h-full border border-gray-100">
+              <div class="h-48 md:h-72 relative overflow-hidden">
+                <!-- IMAGE PLACEHOLDER: assets/etechno.webp -->
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='3'%3E%3Crect width='4' height='3' fill='%23dc2626'/%3E%3C/svg%3E"
+                     alt="eTechno" class="absolute inset-0 w-full h-full object-cover" width="287" height="263">
+                <div class="absolute top-0 left-0 p-4 text-white hidden md:block">
+                  <h3 class="font-bold text-[24px] leading-tight">eTechno</h3>
+                  <p class="text-lg font-medium leading-tight">(Class 6 to 10)</p>
+                </div>
+              </div>
+              <div class="block md:hidden bg-[#15539B] px-4 py-2">
+                <h3 class="font-bold text-[24px] text-white leading-tight inline">Class 6 to 10</h3>
+                <p class="text-lg font-medium text-white mt-0.5 leading-tight inline"> (eTechno)</p>
+              </div>
+              <div class="p-6 flex-grow">
+                <h4 class="text-gray-700 text-[20px] font-semibold mb-3 leading-tight">Preparing for careers, not just certificates</h4>
+                <ul class="space-y-2 text-[16px] font-medium text-gray-600">
+                  <li><i class="fas fa-circle text-[6px] text-brandBlue mr-2"></i>Integrated competitive exam prep</li>
+                  <li><i class="fas fa-circle text-[6px] text-brandBlue mr-2"></i>Structured learning approach</li>
+                  <li><i class="fas fa-circle text-[6px] text-brandBlue mr-2"></i>Technology-enabled framework</li>
+                  <li><i class="fas fa-circle text-[6px] text-brandBlue mr-2"></i>Personalized mentorship and support</li>
+                </ul>
+              </div>
+              <div class="flex text-white text-sm font-semibold">
+                <button class="open-modal-btn w-1/2 bg-brandOrange hover:bg-brandOrangeDark py-3 transition"><i class="fas fa-download"></i> Brochure</button>
+                <button class="open-modal-btn w-1/2 bg-brandBlue hover:bg-brandBlueDark py-3 transition"><i class="fas fa-download"></i> Fees <span class="inline md:hidden">Structure</span></button>
+              </div>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== WHY PARENTS CHOOSE US =================== -->
+<section class="py-12 md:py-20 bg-gray-50 overflow-hidden">
+  <div class="container mx-auto px-4 md:px-6">
+    <div class="md:text-center text-left mb-10 md:mb-16">
+      <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-4">Why Parents Choose Narayana Over Other Schools</h2>
+      <p class="text-gray-500 text-sm md:text-base">A system built for consistency, discipline, and results.</p>
+    </div>
+
+    <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-x-8 md:gap-y-16">
+      <!-- Repeatable feature card -->
+      <div class="flex flex-col items-center text-center border border-gray-200 p-2 rounded-md">
+        <div class="w-16 h-16 md:w-20 md:h-20 bg-brandOrangeLight rounded-full flex items-center justify-center mb-4 md:mb-6">
+          <i class="fas fa-book-open text-2xl text-brandOrange"></i>
+        </div>
+        <h3 class="font-bold text-base md:text-lg mb-2 md:mb-3 text-gray-800 leading-tight">Integrated Curriculum</h3>
+        <p class="hidden md:block text-gray-500 text-xs md:text-base leading-relaxed max-w-xs">The syllabus includes foundations and advanced concepts for competitive examinations.</p>
+      </div>
+
+      <div class="flex flex-col items-center text-center border border-gray-200 p-2 rounded-md">
+        <div class="w-16 h-16 md:w-20 md:h-20 bg-brandOrangeLight rounded-full flex items-center justify-center mb-4 md:mb-6">
+          <i class="fas fa-calendar-alt text-2xl text-brandOrange"></i>
+        </div>
+        <h3 class="font-bold text-base md:text-lg mb-2 md:mb-3 text-gray-800 leading-tight">Structured "Micro Schedule"</h3>
+        <p class="hidden md:block text-gray-500 text-xs md:text-base leading-relaxed max-w-xs">A concrete plan for consistent progress and coverage of the vast syllabus.</p>
+      </div>
+
+      <div class="flex flex-col items-center text-center border border-gray-200 p-2 rounded-md">
+        <div class="w-16 h-16 md:w-20 md:h-20 bg-brandOrangeLight rounded-full flex items-center justify-center mb-4 md:mb-6">
+          <i class="fas fa-search text-2xl text-brandOrange"></i>
+        </div>
+        <h3 class="font-bold text-base md:text-lg mb-2 md:mb-3 text-gray-800 leading-tight">Early Start on Competitive Prep</h3>
+        <p class="hidden md:block text-gray-500 text-xs md:text-base leading-relaxed max-w-xs">Advanced concepts start from grade 6, giving students an edge.</p>
+      </div>
+
+      <div class="flex flex-col items-center text-center border border-gray-200 p-2 rounded-md">
+        <div class="w-16 h-16 md:w-20 md:h-20 bg-brandOrangeLight rounded-full flex items-center justify-center mb-4 md:mb-6">
+          <i class="fas fa-laptop text-2xl text-brandOrange"></i>
+        </div>
+        <h3 class="font-bold text-base md:text-lg mb-2 md:mb-3 text-gray-800 leading-tight">Tech-Enabled Learning</h3>
+        <p class="hidden md:block text-gray-500 text-xs md:text-base leading-relaxed max-w-xs">In-house digital platforms integrate technology into learning.</p>
+      </div>
+
+      <div class="flex flex-col items-center text-center border border-gray-200 p-2 rounded-md">
+        <div class="w-16 h-16 md:w-20 md:h-20 bg-brandOrangeLight rounded-full flex items-center justify-center mb-4 md:mb-6">
+          <i class="fas fa-user-friends text-2xl text-brandOrange"></i>
+        </div>
+        <h3 class="font-bold text-base md:text-lg mb-2 md:mb-3 text-gray-800 leading-tight">Personalized Attention &amp; Monitoring</h3>
+        <p class="hidden md:block text-gray-500 text-xs md:text-base leading-relaxed max-w-xs">An "Adoption Calling" program lets a mentor teacher track each student's growth.</p>
+      </div>
+
+      <div class="flex flex-col items-center text-center border border-gray-200 p-2 rounded-md">
+        <div class="w-16 h-16 md:w-20 md:h-20 bg-brandOrangeLight rounded-full flex items-center justify-center mb-4 md:mb-6">
+          <i class="fas fa-heart text-2xl text-brandOrange"></i>
+        </div>
+        <h3 class="font-bold text-base md:text-lg mb-2 md:mb-3 text-gray-800 leading-tight">Holistic Development Support</h3>
+        <p class="hidden md:block text-gray-500 text-xs md:text-base leading-relaxed max-w-xs">Soft skills, sports, and wellness programs foster well-rounded individuals.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== PROGRAM DEEP-DIVE SECTIONS =================== -->
+<!-- Reusable two-column "program highlight" pattern, repeated per program, alternating image side and bg color -->
+
+<!-- SR. SECONDARY -->
+<section class="py-12 md:py-16 bg-[#f1f9ff] overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="flex flex-col lg:flex-row items-center gap-10 lg:gap-12">
+      <div class="w-full lg:w-1/2">
+        <!-- IMAGE PLACEHOLDER: assets/secondary1.webp -->
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='500' height='500'%3E%3Crect width='500' height='500' fill='%23dc2626'/%3E%3C/svg%3E"
+             alt="Sr. Secondary students" class="w-full h-auto object-cover rounded-lg" width="500" height="500">
+      </div>
+      <div class="w-full lg:w-1/2">
+        <div class="inline-flex items-center mb-6 group">
+          <div class="bg-[#4782ED] text-white w-16 h-16 flex justify-center items-center rounded-full border-2 border-brandOrange flex-shrink-0">
+            <i class="fas fa-graduation-cap text-2xl"></i>
+          </div>
+          <div class="-ml-6 bg-brandOrange text-white px-8 py-3 rounded-md">
+            <span class="text-lg font-bold">SR. Secondary</span>
+            <span class="text-sm font-semibold"> (Class 11 to 12)</span>
+          </div>
+        </div>
+
+        <div class="mb-8">
+          <h3 class="flex items-center gap-3 text-lg md:text-xl font-bold text-gray-800 mb-3">
+            <i class="fas fa-book-open text-brandBlue"></i> Comprehensive Curriculum
+          </h3>
+          <ul class="space-y-2 text-sm md:text-[17px] font-medium text-gray-600">
+            <li class="flex items-start gap-2"><i class="far fa-check-circle text-gray-400 mt-1"></i>Additional teaching for IIT, NEET, CA-CPT, and UPSC.</li>
+            <li class="flex items-start gap-2"><i class="far fa-check-circle text-gray-400 mt-1"></i>Goes beyond subject knowledge into real-world skills.</li>
+            <li class="flex items-start gap-2"><i class="far fa-check-circle text-gray-400 mt-1"></i>Builds a comprehensive set of life skills.</li>
+          </ul>
+        </div>
+
+        <div class="mb-8">
+          <h3 class="flex items-center gap-3 text-lg md:text-xl font-bold text-gray-800 mb-3">
+            <i class="fas fa-stopwatch text-brandBlue"></i> Time Management &amp; Stress Management
+          </h3>
+          <ul class="space-y-2 text-sm md:text-[17px] font-medium text-gray-600">
+            <li class="flex items-start gap-2"><i class="far fa-check-circle text-gray-400 mt-1"></i>Balances academics with extracurricular activities.</li>
+            <li class="flex items-start gap-2"><i class="far fa-check-circle text-gray-400 mt-1"></i>Stress management techniques to stay calm under pressure.</li>
+            <li class="flex items-start gap-2"><i class="far fa-check-circle text-gray-400 mt-1"></i>Guided self-study and research skills for exam success.</li>
+          </ul>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-4">
+          <button class="open-modal-btn bg-[#4782ED] hover:bg-blue-600 text-white font-bold py-3 px-6 rounded shadow-lg transition">Get Fee Structure</button>
+          <button class="open-modal-btn bg-brandBlueDark hover:bg-brandBlue text-white font-bold py-3 px-6 rounded shadow-lg transition"><i class="fas fa-download"></i> Download Brochure</button>
+          <button class="bg-white border border-gray-300 hover:bg-gray-50 text-gray-700 font-bold py-3 px-6 rounded shadow transition"><i class="fas fa-headset text-brandOrange"></i> Get Call Back</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- eKIDZ -->
+<section class="py-12 md:py-16 bg-white overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="flex flex-col lg:flex-row-reverse items-center gap-10 lg:gap-12">
+      <div class="w-full lg:w-1/2">
+        <!-- IMAGE PLACEHOLDER: assets/kidz1.webp -->
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='500' height='500'%3E%3Crect width='500' height='500' fill='%23dc2626'/%3E%3C/svg%3E"
+             alt="eKidz students" class="w-full h-auto object-cover rounded-lg" width="500" height="500">
+      </div>
+      <div class="w-full lg:w-1/2">
+        <div class="inline-flex items-center mb-6 group">
+          <div class="bg-[#4782ED] text-white w-16 h-16 flex justify-center items-center rounded-full border-2 border-brandOrange flex-shrink-0">
+            <i class="fas fa-child text-2xl"></i>
+          </div>
+          <div class="-ml-6 bg-brandOrange text-white px-8 py-3 rounded-md">
+            <span class="text-lg font-bold">eKidz</span>
+            <span class="text-sm font-semibold"> (Nursery to UKG)</span>
+          </div>
+        </div>
+
+        <div class="mb-8">
+          <h3 class="flex items-center gap-3 text-lg md:text-xl font-bold text-gray-800 mb-3">
+            <i class="fas fa-book-open text-brandBlue"></i> Age-Appropriate Curriculum &amp; Personal Attention
+          </h3>
+          <ul class="space-y-2 text-sm md:text-[17px] font-medium text-gray-600">
+            <li class="flex items-start gap-2"><i class="far fa-check-circle text-gray-400 mt-1"></i>Meets the developmental needs of each child.</li>
+            <li class="flex items-start gap-2"><i class="far fa-check-circle text-gray-400 mt-1"></i>A perfect balance of fun and learning.</li>
+            <li class="flex items-start gap-2"><i class="far fa-check-circle text-gray-400 mt-1"></i>Optimal student-teacher ratio with individual guidance.</li>
+          </ul>
+        </div>
+
+        <div class="mb-8">
+          <h3 class="flex items-center gap-3 text-lg md:text-xl font-bold text-gray-800 mb-3">
+            <i class="fas fa-shield-alt text-brandBlue"></i> Safety &amp; Infrastructure
+          </h3>
+          <ul class="space-y-2 text-sm md:text-[17px] font-medium text-gray-600">
+            <li class="flex items-start gap-2"><i class="far fa-check-circle text-gray-400 mt-1"></i>Safe, hygienic campus with well-structured play areas.</li>
+            <li class="flex items-start gap-2"><i class="far fa-check-circle text-gray-400 mt-1"></i>CCTV-enabled, tech-driven security framework.</li>
+            <li class="flex items-start gap-2"><i class="far fa-check-circle text-gray-400 mt-1"></i>App-based parent-school connectivity.</li>
+          </ul>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-4">
+          <button class="open-modal-btn bg-brandOrange hover:bg-orange-600 text-white font-bold py-3 px-6 rounded shadow-lg transition">Get Fee Structure</button>
+          <button class="open-modal-btn bg-brandBlueDark hover:bg-brandBlue text-white font-bold py-3 px-6 rounded shadow-lg transition"><i class="fas fa-download"></i> Download Brochure</button>
+          <button class="bg-white border border-gray-300 hover:bg-gray-50 text-gray-700 font-bold py-3 px-6 rounded shadow transition"><i class="fas fa-headset text-brandOrange"></i> Get Call Back</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- eCHAMPS -->
+<section class="py-12 md:py-16 bg-[#f1f9ff] overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="flex flex-col lg:flex-row items-center gap-10 lg:gap-12">
+      <div class="w-full lg:w-1/2">
+        <!-- IMAGE PLACEHOLDER: assets/champ1.webp -->
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='500' height='500'%3E%3Crect width='500' height='500' fill='%23dc2626'/%3E%3C/svg%3E"
+             alt="eChamps students" class="w-full h-auto object-cover rounded-lg" width="500" height="500">
+      </div>
+      <div class="w-full lg:w-1/2">
+        <div class="inline-flex items-center mb-6 group">
+          <div class="bg-[#4782ED] text-white w-16 h-16 flex justify-center items-center rounded-full border-2 border-brandOrange flex-shrink-0">
+            <i class="fas fa-book-reader text-2xl"></i>
+          </div>
+          <div class="-ml-6 bg-brandOrange text-white px-8 py-3 rounded-md">
+            <span class="text-lg font-bold">eChamps</span>
+            <span class="text-sm font-semibold"> (Class 1 to 5)</span>
+          </div>
+        </div>
+
+        <div class="mb-8">
+          <h3 class="flex items-center gap-3 text-lg md:text-xl font-bold text-gray-800 mb-3">
+            <i class="fas fa-book-open text-brandBlue"></i> Our Unique Approach to Learning
+          </h3>
+          <ul class="space-y-2 text-sm md:text-[17px] font-medium text-gray-600">
+            <li class="flex items-start gap-2"><i class="far fa-check-circle text-gray-400 mt-1"></i>Focus on the overall development of the child.</li>
+            <li class="flex items-start gap-2"><i class="far fa-check-circle text-gray-400 mt-1"></i>Academic excellence blends with other skills.</li>
+            <li class="flex items-start gap-2"><i class="far fa-check-circle text-gray-400 mt-1"></i>A safe and nurturing learning environment.</li>
+          </ul>
+        </div>
+
+        <div class="mb-8">
+          <h3 class="flex items-center gap-3 text-lg md:text-xl font-bold text-gray-800 mb-3">
+            <i class="fas fa-shield-alt text-brandBlue"></i> Conceptual Understanding
+          </h3>
+          <ul class="space-y-2 text-sm md:text-[17px] font-medium text-gray-600">
+            <li class="flex items-start gap-2"><i class="far fa-check-circle text-gray-400 mt-1"></i>Activity-based learning approach (Classes 1-2).</li>
+            <li class="flex items-start gap-2"><i class="far fa-check-circle text-gray-400 mt-1"></i>Experiential learning for older students (Classes 3-5).</li>
+            <li class="flex items-start gap-2"><i class="far fa-check-circle text-gray-400 mt-1"></i>Spacious play areas and safe transport.</li>
+          </ul>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-4">
+          <button class="open-modal-btn bg-[#4782ED] hover:bg-blue-600 text-white font-bold py-3 px-6 rounded shadow-lg transition">Get Fee Structure</button>
+          <button class="open-modal-btn bg-brandBlueDark hover:bg-brandBlue text-white font-bold py-3 px-6 rounded shadow-lg transition"><i class="fas fa-download"></i> Download Brochure</button>
+          <button class="bg-white border border-gray-300 hover:bg-gray-50 text-gray-700 font-bold py-3 px-6 rounded shadow transition"><i class="fas fa-headset text-brandOrange"></i> Get Call Back</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- eTECHNO -->
+<section class="py-12 md:py-16 bg-white overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="flex flex-col lg:flex-row-reverse items-center gap-10 lg:gap-12">
+      <div class="w-full lg:w-1/2">
+        <!-- IMAGE PLACEHOLDER: assets/techno1.webp -->
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='500' height='500'%3E%3Crect width='500' height='500' fill='%23dc2626'/%3E%3C/svg%3E"
+             alt="eTechno students" class="w-full h-auto object-cover rounded-lg" width="500" height="500">
+      </div>
+      <div class="w-full lg:w-1/2">
+        <div class="inline-flex items-center mb-6 group">
+          <div class="bg-[#4782ED] text-white w-16 h-16 flex justify-center items-center rounded-full border-2 border-brandOrange flex-shrink-0">
+            <i class="fas fa-microscope text-2xl"></i>
+          </div>
+          <div class="-ml-6 bg-brandOrange text-white px-8 py-3 rounded-md">
+            <span class="text-lg font-bold">eTechno</span>
+            <span class="text-sm font-semibold"> (Class 6 to 10)</span>
+          </div>
+        </div>
+
+        <div class="mb-8">
+          <h3 class="flex items-center gap-3 text-lg md:text-xl font-bold text-gray-800 mb-3">
+            <i class="fas fa-user-friends text-brandBlue"></i> Adoption Calling Programme
+          </h3>
+          <ul class="space-y-2 text-sm md:text-[17px] font-medium text-gray-600">
+            <li class="flex items-start gap-2"><i class="far fa-check-circle text-gray-400 mt-1"></i>A dedicated mentor for each student.</li>
+            <li class="flex items-start gap-2"><i class="far fa-check-circle text-gray-400 mt-1"></i>Regular parent engagement and progress calls.</li>
+            <li class="flex items-start gap-2"><i class="far fa-check-circle text-gray-400 mt-1"></i>Helps each student realise their full potential.</li>
+          </ul>
+        </div>
+
+        <div class="mb-8">
+          <h3 class="flex items-center gap-3 text-lg md:text-xl font-bold text-gray-800 mb-3">
+            <i class="fas fa-brain text-brandBlue"></i> DISHA Wellness &amp; Olympiad Programmes
+          </h3>
+          <ul class="space-y-2 text-sm md:text-[17px] font-medium text-gray-600">
+            <li class="flex items-start gap-2"><i class="far fa-check-circle text-gray-400 mt-1"></i>Mental and emotional wellness support beyond academics.</li>
+            <li class="flex items-start gap-2"><i class="far fa-check-circle text-gray-400 mt-1"></i>Olympiad-focused programme with practical application.</li>
+            <li class="flex items-start gap-2"><i class="far fa-check-circle text-gray-400 mt-1"></i>Personalised, documented error-analysis for re-learning.</li>
+          </ul>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-4">
+          <button class="open-modal-btn bg-brandOrange hover:bg-orange-600 text-white font-bold py-3 px-6 rounded shadow-lg transition">Get Fee Structure</button>
+          <button class="open-modal-btn bg-brandBlueDark hover:bg-brandBlue text-white font-bold py-3 px-6 rounded shadow-lg transition"><i class="fas fa-download"></i> Download Brochure</button>
+          <button class="bg-white border border-gray-300 hover:bg-gray-50 text-gray-700 font-bold py-3 px-6 rounded shadow transition"><i class="fas fa-headset text-brandOrange"></i> Get Call Back</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== IS NARAYANA RIGHT FOR YOU =================== -->
+<section class="py-12 md:py-16 bg-white border-t border-gray-100 overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 md:px-6">
+    <div class="md:text-center text-left mb-10">
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-2">Is Narayana the Right School for Your Child?</h2>
+      <p class="text-gray-500 text-md">Every child is guided based on their learning needs</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="flex items-start gap-4 p-2">
+        <i class="fas fa-check-circle text-brandGreen text-2xl md:text-3xl flex-shrink-0 mt-1"></i>
+        <div>
+          <h3 class="font-bold text-brandBlue text-md md:text-base leading-tight mb-2">Parents seeking strong academics</h3>
+          <p class="text-gray-500 text-md md:text-base">Structured learning with proven results</p>
+        </div>
+      </div>
+      <div class="flex items-start gap-4 p-2">
+        <i class="fas fa-check-circle text-brandGreen text-2xl md:text-3xl flex-shrink-0 mt-1"></i>
+        <div>
+          <h3 class="font-bold text-brandBlue text-md md:text-base leading-tight mb-2">Students preparing for competitive exams</h3>
+          <p class="text-gray-500 text-md md:text-base">Foundation for IIT, NEET, and Olympiads</p>
+        </div>
+      </div>
+      <div class="flex items-start gap-4 p-2">
+        <i class="fas fa-check-circle text-brandGreen text-2xl md:text-3xl flex-shrink-0 mt-1"></i>
+        <div>
+          <h3 class="font-bold text-brandBlue text-md md:text-base leading-tight mb-2">Families wanting disciplined learning</h3>
+          <p class="text-gray-500 text-md md:text-base">Character building alongside academics</p>
+        </div>
+      </div>
+      <div class="flex items-start gap-4 p-2">
+        <i class="fas fa-check-circle text-brandGreen text-2xl md:text-3xl flex-shrink-0 mt-1"></i>
+        <div>
+          <h3 class="font-bold text-brandBlue text-md md:text-base leading-tight mb-2">Parents who value long-term outcomes</h3>
+          <p class="text-gray-500 text-md md:text-base">An investment in your child's future</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== ACADEMIC RESULTS CAROUSEL =================== -->
+<!-- NOTE: real student names/photos/scores were intentionally NOT copied from the source site (they
+     belong to real, possibly minor, students). Replace the placeholders below with your own verified
+     results and written consent from the families involved before publishing. -->
+<section class="py-16 md:py-20">
+  <div class="container mx-auto px-4 md:px-6 py-8 md:text-center text-left bg-gray-100 rounded-2xl">
+    <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-2">Academic Results That Speak for Themselves</h2>
+    <p class="text-gray-500 text-md mb-8 md:mb-12">Our students don't just pass CBSE — they excel nationally</p>
+
+    <div id="academic-slider" class="splide max-w-6xl mx-auto" aria-label="Academic Results">
+      <div class="splide__track">
+        <ul class="splide__list">
+
+          <li class="splide__slide p-2">
+            <div class="flex flex-col items-center">
+              <div class="w-full rounded-2xl overflow-hidden mb-4 shadow-md aspect-square">
+                <!-- IMAGE PLACEHOLDER: photo of topper #1 (replace with real, consented student photo) -->
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='234' height='234'%3E%3Crect width='234' height='234' fill='%23dc2626'/%3E%3C/svg%3E"
+                     alt="Topper placeholder photo" class="w-full h-full object-cover" width="234" height="234">
+              </div>
+              <h3 class="font-bold text-base md:text-lg text-black">Student Name</h3>
+              <div class="text-2xl md:text-3xl font-bold text-brandBlue my-1">XXX/500</div>
+              <div class="text-[10px] md:text-xs text-gray-500 uppercase tracking-wide">CBSE-X · Sample Year</div>
+            </div>
+          </li>
+
+          <li class="splide__slide p-2">
+            <div class="flex flex-col items-center">
+              <div class="w-full rounded-2xl overflow-hidden mb-4 shadow-md aspect-square bg-brandBlue">
+                <!-- IMAGE PLACEHOLDER: photo of topper #2 -->
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='234' height='234'%3E%3Crect width='234' height='234' fill='%23dc2626'/%3E%3C/svg%3E"
+                     alt="Topper placeholder photo" class="w-full h-full object-cover" width="234" height="234">
+              </div>
+              <h3 class="font-bold text-base md:text-lg text-black">Student Name</h3>
+              <div class="text-2xl md:text-3xl font-bold text-brandBlue my-1">XXX/500</div>
+              <div class="text-[10px] md:text-xs text-gray-500 uppercase tracking-wide">CBSE-XII · Sample Year</div>
+            </div>
+          </li>
+
+          <li class="splide__slide p-2">
+            <div class="flex flex-col items-center">
+              <div class="w-full rounded-2xl overflow-hidden mb-4 shadow-md aspect-square bg-brandBlue">
+                <!-- IMAGE PLACEHOLDER: photo of topper #3 -->
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='234' height='234'%3E%3Crect width='234' height='234' fill='%23dc2626'/%3E%3C/svg%3E"
+                     alt="Topper placeholder photo" class="w-full h-full object-cover" width="234" height="234">
+              </div>
+              <h3 class="font-bold text-base md:text-lg text-black">Student Name</h3>
+              <div class="text-2xl md:text-3xl font-bold text-brandBlue my-1">XXX/500</div>
+              <div class="text-[10px] md:text-xs text-gray-500 uppercase tracking-wide">CBSE-XII · Sample Year</div>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-6">
+      <button class="open-modal-btn bg-brandOrange hover:bg-orange-600 text-white font-bold py-3 px-8 rounded shadow-lg transition duration-300">
+        <i class="fas fa-phone-alt"></i> Get Call Back for Your Query
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- =================== TESTIMONIALS =================== -->
+<!-- NOTE: replace placeholder names/quotes with your own real, consented parent testimonials. -->
+<section class="py-16 md:py-20 bg-white overflow-hidden">
+  <div class="container mx-auto px-4 md:px-6">
+    <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 md:text-center text-left mb-3 md:mb-16">What parents say about Narayana?</h2>
+
+    <div id="testimonial-slider" class="splide max-w-6xl mx-auto" aria-label="Parent Testimonials">
+      <div class="splide__track">
+        <ul class="splide__list">
+
+          <li class="splide__slide p-2 h-auto">
+            <div class="border border-orange-300 rounded-xl p-5 md:p-6 bg-white h-full flex flex-col justify-between hover:shadow-lg transition-shadow duration-300">
+              <div>
+                <div class="flex items-center gap-3 md:gap-4 mb-4">
+                  <div class="w-10 h-10 md:w-12 md:h-12 rounded-full border border-orange-200 flex items-center justify-center bg-orange-50 flex-shrink-0">
+                    <i class="far fa-user text-brandOrange text-lg md:text-xl"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-gray-800 text-base md:text-lg leading-tight">Parent Name</h4>
+                    <p class="text-md md:text-base text-gray-500 mt-0.5">City Name</p>
+                  </div>
+                </div>
+                <p class="text-gray-600 text-md md:text-base leading-relaxed mb-6">
+                  Sample testimonial copy — replace with a real parent's quote about discipline, academics, or campus experience.
+                </p>
+              </div>
+              <div class="text-yellow-400 text-md md:text-base flex gap-1">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+            </div>
+          </li>
+
+          <li class="splide__slide p-2 h-auto">
+            <div class="border border-orange-300 rounded-xl p-5 md:p-6 bg-white h-full flex flex-col justify-between hover:shadow-lg transition-shadow duration-300">
+              <div>
+                <div class="flex items-center gap-3 md:gap-4 mb-4">
+                  <div class="w-10 h-10 md:w-12 md:h-12 rounded-full border border-orange-200 flex items-center justify-center bg-orange-50 flex-shrink-0">
+                    <i class="far fa-user text-brandOrange text-lg md:text-xl"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-gray-800 text-base md:text-lg leading-tight">Parent Name</h4>
+                    <p class="text-xs md:text-sm text-gray-500 mt-0.5">City Name</p>
+                  </div>
+                </div>
+                <p class="text-gray-600 text-xs md:text-sm leading-relaxed mb-6">
+                  Sample testimonial copy — replace with a real parent's quote about teacher support or personalised attention.
+                </p>
+              </div>
+              <div class="text-yellow-400 text-xs md:text-sm flex gap-1">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+            </div>
+          </li>
+
+          <li class="splide__slide p-2 h-auto">
+            <div class="border border-orange-300 rounded-xl p-5 md:p-6 bg-white h-full flex flex-col justify-between hover:shadow-lg transition-shadow duration-300">
+              <div>
+                <div class="flex items-center gap-3 md:gap-4 mb-4">
+                  <div class="w-10 h-10 md:w-12 md:h-12 rounded-full border border-orange-200 flex items-center justify-center bg-orange-50 flex-shrink-0">
+                    <i class="far fa-user text-brandOrange text-lg md:text-xl"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-gray-800 text-base md:text-lg leading-tight">Parent Name</h4>
+                    <p class="text-xs md:text-sm text-gray-500 mt-0.5">City Name</p>
+                  </div>
+                </div>
+                <p class="text-gray-600 text-xs md:text-sm leading-relaxed mb-6">
+                  Sample testimonial copy — replace with a real parent's quote about how their child's experience changed.
+                </p>
+              </div>
+              <div class="text-yellow-400 text-xs md:text-sm flex gap-1">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== CAMPUS & FACILITIES =================== -->
+<section class="py-16 md:py-20 bg-gray-50 overflow-hidden">
+  <div class="container mx-auto px-4">
+    <div class="md:text-center text-left mb-10 md:mb-12">
+      <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-3">World-Class Campus &amp; Facilities</h2>
+      <p class="text-gray-500 text-md md:text-base">Modern infrastructure designed to inspire learning and growth</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Repeatable facility card -->
+      <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+        <!-- IMAGE PLACEHOLDER: assets/digital-classroom.webp -->
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='407' height='305'%3E%3Crect width='407' height='305' fill='%23dc2626'/%3E%3C/svg%3E"
+             alt="Digital Classroom" class="w-full object-cover" width="407" height="305">
+        <div class="p-4">
+          <h3 class="text-brandBlue font-bold text-[18px] md:text-[22px] mb-2 md:mb-4">Digital Classroom</h3>
+          <p class="text-gray-500 text-[15px] font-medium leading-relaxed">Technology-enabled learning spaces with interactive boards and digital resources.</p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+        <!-- IMAGE PLACEHOLDER: assets/lab-activity.webp -->
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='407' height='305'%3E%3Crect width='407' height='305' fill='%23dc2626'/%3E%3C/svg%3E"
+             alt="Lab & Activity Room" class="w-full object-cover" width="407" height="305">
+        <div class="p-4">
+          <h3 class="text-brandBlue font-bold text-[18px] md:text-[22px] mb-2 md:mb-4">Lab &amp; Activity Room</h3>
+          <p class="text-gray-500 text-[15px] font-medium leading-relaxed">Well-equipped Physics, Chemistry, Biology, and Computer labs for hands-on learning.</p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+        <!-- IMAGE PLACEHOLDER: assets/hostel.webp -->
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='407' height='305'%3E%3Crect width='407' height='305' fill='%23dc2626'/%3E%3C/svg%3E"
+             alt="Hostel" class="w-full object-cover" width="407" height="305">
+        <div class="p-4">
+          <h3 class="text-brandBlue font-bold text-[18px] md:text-[22px] mb-2 md:mb-4">Hostel</h3>
+          <p class="text-gray-500 text-[15px] font-medium leading-relaxed">Comfortable and secure hostel facilities for students.</p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+        <!-- IMAGE PLACEHOLDER: assets/spacious-campus.webp -->
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='407' height='305'%3E%3Crect width='407' height='305' fill='%23dc2626'/%3E%3C/svg%3E"
+             alt="Spacious Campus" class="w-full object-cover" width="407" height="305">
+        <div class="p-4">
+          <h3 class="text-brandBlue font-bold text-[18px] md:text-[22px] mb-2 md:mb-4">Spacious Campus</h3>
+          <p class="text-gray-500 text-[15px] font-medium leading-relaxed">Modern playgrounds, indoor sports facilities, and activity centers.</p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+        <!-- IMAGE PLACEHOLDER: assets/safe-transportation.webp -->
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='407' height='305'%3E%3Crect width='407' height='305' fill='%23dc2626'/%3E%3C/svg%3E"
+             alt="Safe Transport" class="w-full object-cover" width="407" height="305">
+        <div class="p-4">
+          <h3 class="text-brandBlue font-bold text-[18px] md:text-[22px] mb-2 md:mb-4">Safe Transport</h3>
+          <p class="text-gray-500 text-[15px] font-medium leading-relaxed">GPS-tracked buses covering major routes across the city.</p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+        <!-- IMAGE PLACEHOLDER: assets/safety.webp -->
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='407' height='305'%3E%3Crect width='407' height='305' fill='%23dc2626'/%3E%3C/svg%3E"
+             alt="Safety & Security" class="w-full object-cover" width="407" height="305">
+        <div class="p-4">
+          <h3 class="text-brandBlue font-bold text-[18px] md:text-[22px] mb-2 md:mb-4">Safety &amp; Security</h3>
+          <p class="text-gray-500 text-[15px] font-medium leading-relaxed">24/7 CCTV surveillance, trained security personnel, biometric access control.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== FAQ =================== -->
+<section class="py-16 md:py-20 bg-white overflow-hidden">
+  <div class="container mx-auto px-4 md:px-6 max-w-7xl">
+    <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 text-center mb-8 md:mb-10">Frequently Asked Questions</h2>
+
+    <div class="space-y-3 md:space-y-4">
+
+      <!-- Repeatable FAQ item: button toggles the sibling .faq-content -->
+      <div class="border border-gray-200 rounded-md bg-slate-50 overflow-hidden">
+        <button class="faq-toggle w-full px-4 md:px-6 py-3 md:py-4 text-left flex justify-between items-center focus:outline-none">
+          <span class="font-medium text-gray-800 text-sm md:text-lg pr-4">1. What curriculum does Narayana Schools follow?</span>
+          <span class="border border-gray-400 rounded-full w-5 h-5 md:w-6 md:h-6 flex items-center justify-center flex-shrink-0">
+            <i class="faq-icon fas fa-chevron-down text-gray-500 text-[10px] md:text-xs transition-transform duration-300"></i>
+          </span>
+        </button>
+        <div class="faq-content hidden px-4 md:px-6 pb-4 text-xs md:text-[15px] leading-relaxed text-gray-600">
+          <p>A blend of CBSE curriculum and competitive exam preparation — IIT, NEET, UPSC, Olympiads, and more.</p>
+        </div>
+      </div>
+
+      <div class="border border-gray-200 rounded-md bg-slate-50 overflow-hidden">
+        <button class="faq-toggle w-full px-4 md:px-6 py-3 md:py-4 text-left flex justify-between items-center focus:outline-none">
+          <span class="font-medium text-gray-800 text-sm md:text-lg pr-4">2. What facilities are available on campus?</span>
+          <span class="border border-gray-400 rounded-full w-5 h-5 md:w-6 md:h-6 flex items-center justify-center flex-shrink-0">
+            <i class="faq-icon fas fa-chevron-down text-gray-500 text-[10px] md:text-xs transition-transform duration-300"></i>
+          </span>
+        </button>
+        <div class="faq-content hidden px-4 md:px-6 pb-4 text-xs md:text-[15px] leading-relaxed text-gray-600">
+          <p>Smart classrooms, high-tech labs, sports zones, libraries, and activity hubs.</p>
+        </div>
+      </div>
+
+      <div class="border border-gray-200 rounded-md bg-slate-50 overflow-hidden">
+        <button class="faq-toggle w-full px-4 md:px-6 py-3 md:py-4 text-left flex justify-between items-center focus:outline-none">
+          <span class="font-medium text-gray-800 text-sm md:text-lg pr-4">3. How does the school ensure student safety?</span>
+          <span class="border border-gray-400 rounded-full w-5 h-5 md:w-6 md:h-6 flex items-center justify-center flex-shrink-0">
+            <i class="faq-icon fas fa-chevron-down text-gray-500 text-[10px] md:text-xs transition-transform duration-300"></i>
+          </span>
+        </button>
+        <div class="faq-content hidden px-4 md:px-6 pb-4 text-xs md:text-[15px] leading-relaxed text-gray-600">
+          <p>24/7 CCTV, trained security, fire safety, and GPS-tracked buses.</p>
+        </div>
+      </div>
+
+      <div class="border border-gray-200 rounded-md bg-slate-50 overflow-hidden">
+        <button class="faq-toggle w-full px-4 md:px-6 py-3 md:py-4 text-left flex justify-between items-center focus:outline-none">
+          <span class="font-medium text-gray-800 text-sm md:text-lg pr-4">4. Does the school offer hostels &amp; daycare?</span>
+          <span class="border border-gray-400 rounded-full w-5 h-5 md:w-6 md:h-6 flex items-center justify-center flex-shrink-0">
+            <i class="faq-icon fas fa-chevron-down text-gray-500 text-[10px] md:text-xs transition-transform duration-300"></i>
+          </span>
+        </button>
+        <div class="faq-content hidden px-4 md:px-6 pb-4 text-xs md:text-[15px] leading-relaxed text-gray-600">
+          <p>Yes — comfortable hostels and nurturing daycare for a home-away-from-home experience.</p>
+        </div>
+      </div>
+
+      <div class="border border-gray-200 rounded-md bg-slate-50 overflow-hidden">
+        <button class="faq-toggle w-full px-4 md:px-6 py-3 md:py-4 text-left flex justify-between items-center focus:outline-none">
+          <span class="font-medium text-gray-800 text-sm md:text-lg pr-4">5. What makes Narayana one of the best CBSE schools?</span>
+          <span class="border border-gray-400 rounded-full w-5 h-5 md:w-6 md:h-6 flex items-center justify-center flex-shrink-0">
+            <i class="faq-icon fas fa-chevron-down text-gray-500 text-[10px] md:text-xs transition-transform duration-300"></i>
+          </span>
+        </button>
+        <div class="faq-content hidden px-4 md:px-6 pb-4 text-xs md:text-[15px] leading-relaxed text-gray-600">
+          <p>A unique blend of board and competitive exam preparation through programmes like eKidz, eChamps, and eTechno, plus personalised mentorship and digital learning tools.</p>
+        </div>
+      </div>
+
+      <div class="border border-gray-200 rounded-md bg-slate-50 overflow-hidden">
+        <button class="faq-toggle w-full px-4 md:px-6 py-3 md:py-4 text-left flex justify-between items-center focus:outline-none">
+          <span class="font-medium text-gray-800 text-sm md:text-lg pr-4">6. Is Narayana an English medium school?</span>
+          <span class="border border-gray-400 rounded-full w-5 h-5 md:w-6 md:h-6 flex items-center justify-center flex-shrink-0">
+            <i class="faq-icon fas fa-chevron-down text-gray-500 text-[10px] md:text-xs transition-transform duration-300"></i>
+          </span>
+        </button>
+        <div class="faq-content hidden px-4 md:px-6 pb-4 text-xs md:text-[15px] leading-relaxed text-gray-600">
+          <p>Yes, from nursery through senior secondary, with a strong focus on language development.</p>
+        </div>
+      </div>
+
+      <div class="border border-gray-200 rounded-md bg-slate-50 overflow-hidden">
+        <button class="faq-toggle w-full px-4 md:px-6 py-3 md:py-4 text-left flex justify-between items-center focus:outline-none">
+          <span class="font-medium text-gray-800 text-sm md:text-lg pr-4">7. How do I apply for admission?</span>
+          <span class="border border-gray-400 rounded-full w-5 h-5 md:w-6 md:h-6 flex items-center justify-center flex-shrink-0">
+            <i class="faq-icon fas fa-chevron-down text-gray-500 text-[10px] md:text-xs transition-transform duration-300"></i>
+          </span>
+        </button>
+        <div class="faq-content hidden px-4 md:px-6 pb-4 text-xs md:text-[15px] leading-relaxed text-gray-600">
+          <p>Apply online through this page or visit your nearest branch. We welcome students from kindergarten through senior secondary.</p>
+        </div>
+      </div>
+
+      <div class="border border-gray-200 rounded-md bg-slate-50 overflow-hidden">
+        <button class="faq-toggle w-full px-4 md:px-6 py-3 md:py-4 text-left flex justify-between items-center focus:outline-none">
+          <span class="font-medium text-gray-800 text-sm md:text-lg pr-4">8. Does Narayana offer preschool and nursery education?</span>
+          <span class="border border-gray-400 rounded-full w-5 h-5 md:w-6 md:h-6 flex items-center justify-center flex-shrink-0">
+            <i class="faq-icon fas fa-chevron-down text-gray-500 text-[10px] md:text-xs transition-transform duration-300"></i>
+          </span>
+        </button>
+        <div class="faq-content hidden px-4 md:px-6 pb-4 text-xs md:text-[15px] leading-relaxed text-gray-600">
+          <p>Yes, through the eKidz programme — a structured preschool curriculum centered on play-based learning.</p>
+        </div>
+      </div>
+
+      <div class="border border-gray-200 rounded-md bg-slate-50 overflow-hidden">
+        <button class="faq-toggle w-full px-4 md:px-6 py-3 md:py-4 text-left flex justify-between items-center focus:outline-none">
+          <span class="font-medium text-gray-800 text-sm md:text-lg pr-4">9. How do I find the nearest branch?</span>
+          <span class="border border-gray-400 rounded-full w-5 h-5 md:w-6 md:h-6 flex items-center justify-center flex-shrink-0">
+            <i class="faq-icon fas fa-chevron-down text-gray-500 text-[10px] md:text-xs transition-transform duration-300"></i>
+          </span>
+        </button>
+        <div class="faq-content hidden px-4 md:px-6 pb-4 text-xs md:text-[15px] leading-relaxed text-gray-600">
+          <p>Use the city selector in the admission form above, or get in touch through the Call/WhatsApp buttons on this page.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- =================== FINAL CTA + STATS =================== -->
+<section class="py-16 md:py-20 bg-brandBlueDark relative overflow-hidden">
+  <div class="container mx-auto px-4 md:px-6 relative z-10">
+    <div class="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center justify-center">
+
+      <div class="w-full lg:w-1/2 max-w-xl text-center lg:text-left">
+        <div class="shadow-2xl mb-6 md:mb-8 rounded-lg overflow-hidden">
+          <!-- IMAGE PLACEHOLDER: assets/footer.webp (students in hallway) -->
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='575' height='437'%3E%3Crect width='575' height='437' fill='%23dc2626'/%3E%3C/svg%3E"
+               alt="Students in hallway" class="w-full h-auto object-cover" width="575" height="437">
+        </div>
+        <div class="text-white space-y-3 md:space-y-4">
+          <p class="text-base md:text-lg font-medium">Limited seats available for 2026–27 academic year.</p>
+          <p class="text-xl md:text-2xl font-bold">Secure your spot today!</p>
+          <button class="open-modal-btn bg-white text-brandOrangeDark font-bold py-3 px-8 rounded-md shadow-lg hover:bg-gray-100 transition inline-flex items-center justify-center gap-2 mt-2 md:mt-4 w-full sm:w-auto">
+            <i class="fas fa-download"></i> Download Brochure
+          </button>
+        </div>
+      </div>
+
+      <div class="w-full max-w-lg lg:w-[600px] bg-white p-5 md:p-6 rounded-xl shadow-2xl border-[3px] border-brandBlue mx-auto">
+        <h3 class="text-xl md:text-3xl font-bold text-black mb-5 md:mb-6">Admissions Open for AY 2026-27</h3>
+        <form class="space-y-3" id="form-footer" novalidate>
+          <input type="text" placeholder="Student Name" required name="name" class="w-full px-4 py-2.5 border border-gray-300 rounded text-md focus:outline-none focus:border-brandBlue bg-gray-50">
+          <input type="tel" placeholder="Ph. Number" required pattern="[6-9][0-9]{9}" maxlength="10" name="phone" class="w-full px-4 py-2.5 border border-gray-300 rounded text-md focus:outline-none focus:border-brandBlue bg-gray-50">
+          <input type="email" placeholder="Parent's Email (Optional)" name="parent_email" class="w-full px-4 py-2.5 border border-gray-300 rounded text-md focus:outline-none focus:border-brandBlue bg-gray-50">
+          <select required name="city" class="w-full px-4 py-2.5 border border-gray-300 rounded text-md text-gray-500 bg-gray-50 focus:outline-none focus:border-brandBlue">
+            <option selected disabled value="">Select City</option>
+            <option>Bardhaman</option><option>Coochbehar</option><option>Contai</option>
+            <option>Darjeeling</option><option>East Midnapore</option><option>Hooghly</option>
+            <option>Howrah</option><option>Kalimpong</option><option>Kolkata</option>
+            <option>Murshidabad</option><option>Nadia</option><option>North 24 Parganas</option>
+            <option>North Dinajpur</option><option>Purulia</option>
+          </select>
+          <select required name="class" class="w-full px-4 py-2.5 border border-gray-300 rounded text-md text-gray-500 bg-gray-50 focus:outline-none focus:border-brandBlue">
+            <option selected disabled value="">Select Class</option>
+            <option>Nursery</option><option>LKG</option><option>UKG</option>
+            <option>Class 1</option><option>Class 2</option><option>Class 3</option>
+            <option>Class 4</option><option>Class 5</option><option>Class 6</option>
+            <option>Class 7</option><option>Class 8</option><option>Class 9</option>
+            <option>Class 10</option><option>Class 11</option><option>Class 12</option>
+          </select>
+
+          <div class="mt-2 flex flex-col gap-2" data-otp-trigger>
+            <button type="button" data-send-otp class="w-full md:w-auto bg-brandOrange hover:bg-orange-600 text-white font-bold py-2.5 px-6 rounded text-sm transition inline-flex items-center justify-center gap-2">
+              Submit Now
+            </button>
+            <span class="otp-status hidden text-sm text-green-600 font-medium">OTP sent successfully.</span>
+          </div>
+          <div class="otp-section hidden">
+            <input type="text" maxlength="6" placeholder="Enter OTP" data-otp-input class="w-full px-4 py-2.5 border border-gray-300 rounded text-md focus:outline-none focus:border-brandBlue">
+            <button type="button" data-verify-otp class="mt-2 w-full bg-brandOrange hover:bg-orange-600 text-white font-bold py-2.5 px-6 rounded text-sm transition">Verify OTP</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="flex flex-col sm:flex-row justify-center items-center gap-4 md:gap-6 mt-12 md:mt-16">
+      <div class="bg-white rounded-xl p-5 md:p-6 w-full max-w-md text-center shadow-lg">
+        <div class="flex justify-center mb-2 md:mb-3">
+          <!-- IMAGE PLACEHOLDER: assets/narayana-logo.png -->
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='3'%3E%3Crect width='4' height='3' fill='%23dc2626'/%3E%3C/svg%3E"
+               alt="Narayana" class="h-12 object-contain">
+        </div>
+        <h4 class="font-bold text-gray-800 text-md md:text-lg">Narayana Schools</h4>
+        <p class="text-md md:text-lg text-gray-500 mb-1 md:mb-2">No. of Schools</p>
+        <div class="text-4xl md:text-5xl font-bold text-brandBlue">32</div>
+      </div>
+      <div class="bg-white rounded-xl p-5 md:p-6 w-full max-w-md text-center shadow-lg">
+        <div class="flex justify-center mb-2 md:mb-3">
+          <!-- IMAGE PLACEHOLDER: assets/logo1.png -->
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='3'%3E%3Crect width='4' height='3' fill='%23dc2626'/%3E%3C/svg%3E"
+               alt="Narayana International School" class="h-12 object-contain">
+        </div>
+        <h4 class="font-bold text-gray-800 text-md md:text-lg">Narayana International School</h4>
+        <p class="text-md md:text-lg text-gray-500 mb-1 md:mb-2">No. of Schools</p>
+        <div class="text-4xl md:text-5xl font-bold text-brandOrange">06</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== FOOTER =================== -->
+<footer class="bg-[#073263] text-white pt-6 md:pt-8 pb-24 md:pb-8">
+  <div class="container mx-auto px-4 md:px-6">
+    <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+      <p class="text-sm md:text-base text-gray-300">© <span id="footer-year"></span> Narayana Schools. All Rights Reserved.</p>
+      <div class="flex gap-4 md:gap-6 text-sm md:text-base">
+        <a href="#" class="hover:text-brandOrange transition">Privacy Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- =================== FLOATING ELEMENTS (desktop) =================== -->
+<div class="fixed -right-10 top-[35%] hidden lg:block z-40">
+  <button class="open-modal-btn bg-brandBlue rotate-90 rounded-lg text-center p-4 shadow-lg">
+    <span class="text-white font-medium">Get Fees Structure</span>
+  </button>
+</div>
+
+<div class="fixed -left-10 top-[50%] hidden lg:block z-40">
+  <button class="open-modal-btn bg-brandBlue -rotate-90 rounded-lg text-center p-4 shadow-lg">
+    <span class="text-white font-medium">Download Brochure</span>
+  </button>
+</div>
+
+<div class="fixed right-4 top-[50%] hidden lg:flex flex-col gap-2 z-40">
+  <a href="tel:18001219199" class="bg-brandOrange rounded-lg text-center p-4 shadow-lg" aria-label="Call us">
+    <i class="fas fa-phone-alt text-white text-xl"></i>
+  </a>
+  <a href="https://api.whatsapp.com/send?phone=910000000000" class="bg-[#25D366] rounded-lg text-center p-4 shadow-lg" aria-label="WhatsApp us">
+    <i class="fab fa-whatsapp text-white text-xl"></i>
+  </a>
+</div>
+
+<!-- =================== FLOATING ELEMENTS (mobile) =================== -->
+<div class="lg:hidden">
+  <div class="fixed bottom-[70px] left-1/2 -translate-x-1/2 w-[94%] max-w-[480px] z-[998] animate-bounce-subtle">
+    <div class="bg-[#FFC600] rounded-2xl p-2 flex items-center gap-3 shadow-xl border-2 border-white">
+      <div class="w-11 h-11 bg-[#002A5C] rounded-full flex items-center justify-center flex-shrink-0 text-white border-2 border-white/30">
+        <i class="fas fa-graduation-cap text-xl"></i>
+      </div>
+      <div class="flex-1">
+        <h4 class="text-[15px] text-[#002A5C] font-black uppercase leading-none tracking-tight mb-1">Class Nursery–XII</h4>
+        <p class="text-[9px] text-[#002A5C] font-bold uppercase leading-none opacity-80">Admission Ongoing</p>
+      </div>
+      <button class="open-modal-btn bg-[#002A5C] text-white px-4 py-2.5 rounded-xl font-bold text-[12px] flex items-center gap-2 shadow-lg active:scale-95 transition-transform whitespace-nowrap">
+        <span>APPLY NOW</span><i class="fas fa-chevron-right text-[9px]"></i>
+      </button>
+    </div>
+  </div>
+
+  <div class="fixed bottom-0 left-0 w-full z-[999]">
+    <div class="bg-white shadow-[0_-5px_25px_rgba(0,0,0,0.15)] grid grid-cols-4 border-t border-gray-100">
+      <a href="https://api.whatsapp.com/send?phone=910000000000" class="flex flex-col items-center justify-center py-1 border-r border-gray-50 active:bg-gray-50">
+        <i class="fab fa-whatsapp text-2xl text-[#25D366]"></i>
+        <span class="text-[10px] font-bold text-gray-500 uppercase mt-1 tracking-tighter">WhatsApp</span>
+      </a>
+      <a href="tel:18001219199" class="flex flex-col items-center justify-center py-1 border-r border-gray-50 active:bg-gray-50">
+        <i class="fas fa-phone text-[20px] text-brandBlue"></i>
+        <span class="text-[10px] font-bold text-gray-500 uppercase mt-1 tracking-tighter">Call Now</span>
+      </a>
+      <button class="open-modal-btn flex flex-col items-center justify-center py-1 border-r border-gray-50 active:bg-gray-50">
+        <i class="fas fa-file-download text-[20px] text-gray-700"></i>
+        <span class="text-[10px] font-bold text-gray-500 uppercase mt-1 tracking-tighter">Brochure</span>
+      </button>
+      <button class="open-modal-btn flex flex-col items-center justify-center py-1 bg-brandOrange text-white active:bg-orange-600">
+        <i class="fas fa-receipt text-[20px]"></i>
+        <span class="text-[10px] font-bold uppercase mt-1 tracking-tighter">Fees</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- =================== ADMISSION MODAL =================== -->
+<div id="admission-modal" class="fixed inset-0 z-[9999] hidden items-center justify-center">
+  <div id="modal-backdrop" class="absolute inset-0 bg-black/60 backdrop-blur-sm opacity-0 transition-opacity duration-300 cursor-pointer"></div>
+
+  <div id="modal-content" class="relative w-full max-w-lg bg-white rounded-xl shadow-2xl border-[3px] border-brandBlue mx-4 transform transition-all duration-300 z-10 opacity-0 scale-95">
+    <button id="close-modal-btn" aria-label="Close" class="absolute top-4 right-4 text-gray-400 hover:text-red-500 text-2xl focus:outline-none transition-colors duration-200">
+      <i class="fas fa-times"></i>
+    </button>
+
+    <div class="p-6 md:p-8">
+      <h3 class="text-2xl font-bold text-black mb-6">Admissions Open for AY 2026-27</h3>
+      <form class="space-y-3" id="form-modal" novalidate>
+        <input type="text" placeholder="Student Name" required name="name" class="w-full px-4 py-3 border border-gray-300 rounded text-sm focus:outline-none focus:border-brandBlue bg-gray-50">
+        <input type="tel" placeholder="Ph. Number" required pattern="[6-9][0-9]{9}" maxlength="10" name="phone" class="w-full px-4 py-3 border border-gray-300 rounded text-sm focus:outline-none focus:border-brandBlue bg-gray-50">
+        <input type="email" placeholder="Parent's Email (Optional)" name="parent_email" class="w-full px-4 py-3 border border-gray-300 rounded text-sm focus:outline-none focus:border-brandBlue bg-gray-50">
+        <select required name="city" class="w-full px-4 py-3 border border-gray-300 rounded text-sm text-gray-500 bg-gray-50 focus:outline-none focus:border-brandBlue">
+          <option selected disabled value="">Select City</option>
+          <option>Bardhaman</option><option>Coochbehar</option><option>Contai</option>
+          <option>Darjeeling</option><option>East Midnapore</option><option>Hooghly</option>
+          <option>Howrah</option><option>Kalimpong</option><option>Kolkata</option>
+          <option>Murshidabad</option><option>Nadia</option><option>North 24 Parganas</option>
+          <option>North Dinajpur</option><option>Purulia</option>
+        </select>
+        <select required name="class" class="w-full px-4 py-3 border border-gray-300 rounded text-sm text-gray-500 bg-gray-50 focus:outline-none focus:border-brandBlue">
+          <option selected disabled value="">Select Class</option>
+          <option>Nursery</option><option>LKG</option><option>UKG</option>
+          <option>Class 1</option><option>Class 2</option><option>Class 3</option>
+          <option>Class 4</option><option>Class 5</option><option>Class 6</option>
+          <option>Class 7</option><option>Class 8</option><option>Class 9</option>
+          <option>Class 10</option><option>Class 11</option><option>Class 12</option>
+        </select>
+
+        <div class="mt-2 flex flex-col gap-2" data-otp-trigger>
+          <button type="button" data-send-otp class="w-full bg-brandOrange hover:bg-orange-600 text-white font-bold py-2.5 px-6 rounded text-sm transition">Submit Now</button>
+          <span class="otp-status hidden text-sm text-green-600 font-medium">OTP sent successfully.</span>
+        </div>
+        <div class="otp-section hidden">
+          <input type="text" maxlength="6" placeholder="Enter OTP" data-otp-input class="w-full px-4 py-2.5 border border-gray-300 rounded text-md focus:outline-none focus:border-brandBlue">
+          <button type="button" data-verify-otp class="mt-2 w-full bg-brandOrange hover:bg-orange-600 text-white font-bold py-2.5 px-6 rounded text-sm transition">Verify OTP</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- =================== SCRIPTS =================== -->
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  document.getElementById('footer-year').textContent = new Date().getFullYear();
+
+  // ---------- AOS (scroll-fade animations) ----------
+  AOS.init({ duration: 700, once: true, easing: 'ease-out-cubic' });
+
+  // ---------- Splide carousels ----------
+  document.addEventListener('DOMContentLoaded', function () {
+    new Splide('#programs-slider', {
+      type: 'loop',
+      perPage: 4,
+      gap: '1.5rem',
+      pagination: true,
+      breakpoints: { 1024: { perPage: 2 }, 640: { perPage: 1 } },
+    }).mount();
+
+    new Splide('#academic-slider', {
+      type: 'loop',
+      perPage: 3,
+      gap: '2rem',
+      pagination: false,
+      breakpoints: { 768: { perPage: 1 } },
+    }).mount();
+
+    new Splide('#testimonial-slider', {
+      type: 'loop',
+      perPage: 3,
+      gap: '1.5rem',
+      pagination: true,
+      breakpoints: { 1024: { perPage: 2 }, 640: { perPage: 1 } },
+    }).mount();
+  });
+
+  // ---------- Stat counter animation ----------
+  function animateCounter(el) {
+    const target = parseInt(el.dataset.target, 10);
+    const duration = 1500;
+    const start = performance.now();
+    function tick(now) {
+      const progress = Math.min((now - start) / duration, 1);
+      el.textContent = Math.floor(progress * target).toLocaleString();
+      if (progress < 1) requestAnimationFrame(tick);
+      else el.textContent = target.toLocaleString();
+    }
+    requestAnimationFrame(tick);
+  }
+  const heroStats = document.getElementById('hero-stats');
+  if (heroStats) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          heroStats.querySelectorAll('.counter').forEach(animateCounter);
+          observer.disconnect();
+        }
+      });
+    }, { threshold: 0.4 });
+    observer.observe(heroStats);
+  }
+
+  // ---------- FAQ accordion ----------
+  document.querySelectorAll('.faq-toggle').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const content = btn.nextElementSibling;
+      const icon = btn.querySelector('.faq-icon');
+      content.classList.toggle('hidden');
+      icon.classList.toggle('rotate-180');
+    });
+  });
+
+  // ---------- Admission modal open/close ----------
+  const modal = document.getElementById('admission-modal');
+  const modalBackdrop = document.getElementById('modal-backdrop');
+  const modalContent = document.getElementById('modal-content');
+
+  function openModal() {
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+    requestAnimationFrame(() => {
+      modalBackdrop.classList.remove('opacity-0');
+      modalContent.classList.remove('opacity-0', 'scale-95');
+    });
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal() {
+    modalBackdrop.classList.add('opacity-0');
+    modalContent.classList.add('opacity-0', 'scale-95');
+    document.body.style.overflow = '';
+    setTimeout(() => { modal.classList.add('hidden'); modal.classList.remove('flex'); }, 250);
+  }
+  document.querySelectorAll('.open-modal-btn').forEach((btn) => btn.addEventListener('click', openModal));
+  document.getElementById('close-modal-btn').addEventListener('click', closeModal);
+  modalBackdrop.addEventListener('click', closeModal);
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+
+  // ---------- Mock OTP flow ----------
+  // TODO: Replace this whole block with real calls to your SMS/OTP provider:
+  //   1) sendOtp() -> POST phone number to your backend, backend triggers SMS
+  //   2) verifyOtp() -> POST the entered code to your backend for verification
+  //   3) On success, actually submit the lead (see "submitLead" below)
+  document.querySelectorAll('[data-otp-trigger]').forEach((trigger) => {
+    const form = trigger.closest('form');
+    const sendBtn = trigger.querySelector('[data-send-otp]');
+    const statusEl = trigger.querySelector('.otp-status');
+    const otpSection = form.querySelector('.otp-section');
+
+    sendBtn.addEventListener('click', () => {
+      if (!form.checkValidity()) { form.reportValidity(); return; }
+      statusEl.classList.remove('hidden');
+      otpSection.classList.remove('hidden');
+      trigger.classList.add('hidden');
+    });
+
+    const verifyBtn = otpSection.querySelector('[data-verify-otp]');
+    verifyBtn.addEventListener('click', () => {
+      const otpInput = otpSection.querySelector('[data-otp-input]');
+      if (!otpInput.value) { otpInput.focus(); return; }
+      submitLead(form);
+    });
+  });
+
+  function submitLead(form) {
+    // TODO: replace with a real fetch() POST to your leads endpoint, e.g.
+    // fetch('/api/leads', { method: 'POST', body: new FormData(form) })
+    console.log('Lead submitted (demo):', Object.fromEntries(new FormData(form).entries()));
+    alert('Thanks! Your enquiry has been received (demo mode — wire this up to your backend).');
+    if (modal && !modal.classList.contains('hidden')) closeModal();
+  }
+</script>
+</body>
+</html>
